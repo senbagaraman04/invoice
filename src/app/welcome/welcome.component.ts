@@ -94,7 +94,7 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     this.flagsCheck = true;
    if(this.loginForm.controls['username'].value === environment.username && this.loginForm.controls['password'].value === environment.password){
      this.message ="login success"
-   //  this.router.navigate(['/admin/vehicledetails']);    
+     this.router.navigate(['/admin']);    
 
    }else{
      this.message ="Username or password is incorrect";

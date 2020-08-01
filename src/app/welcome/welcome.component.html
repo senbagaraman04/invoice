@@ -39,16 +39,20 @@
   
           <input type="submit" id="submit" value="Submit"  (click) ="checkLogin()" >
 
-  <ng-container *ngIf="submitted && f.username.errors" class="invalid-feedback">
-      <div *ngIf="f.username.errors.required">Username is required</div>
-  </ng-container>
-  <ng-container *ngIf="submitted && f.password.errors" class="invalid-feedback">
-      <div *ngIf="f.password.errors.required">Password is required</div>
-  </ng-container>
+          <marquee>
 
-  <ng-container class="form-group">
-      <p *ngIf="flagsCheck">{{message}}</p>
-   </ng-container>
+            <ng-container *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <span *ngIf="f.username.errors.required">Username is required</span>
+            </ng-container>
+            <ng-container *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <span *ngIf="f.password.errors.required">Password is required</span>
+            </ng-container>
+          
+            <ng-container class="form-group">
+                <p *ngIf="flagsCheck">{{message}}</p>
+             </ng-container>
+          </marquee>
+
           </form>
   
           
