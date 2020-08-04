@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
+  selector: 'app-admin-panel',
+  templateUrl: './admin-panel.component.html',
+  styleUrls: ['./admin-panel.component.scss'],
   animations: [
     trigger('expandMenuBar', [
       state('open', style({
@@ -26,13 +26,9 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ])
   ]
 })
-
-export class DashboardComponent implements OnInit {
-
-
-  expandMenu : boolean = true;
-
-
+export class AdminPanelComponent implements OnInit {
+ 
+  expandMenu : boolean = false;
   constructor() { }
 
   ngOnInit() {
