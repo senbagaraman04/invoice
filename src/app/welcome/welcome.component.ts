@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import  anime from 'animejs';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { environment } from 'src/environments/environment';
+import { environment } from  '../../environments/environment';
 import { Router } from '@angular/router';
 
 
@@ -92,9 +92,9 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
 
   checkLogin(){
     this.flagsCheck = true;
-   if(this.loginForm.controls['username'].value === environment.username && this.loginForm.controls['password'].value === environment.password){
+   if(this.loginForm.controls['username'].value === environment.userName && this.loginForm.controls['password'].value === environment.password){
      this.message ="login success"
-     this.router.navigate(['/admin']);    
+     this.router.navigate(['/admin/overview']);    
 
    }else{
      this.message ="Username or password is incorrect";

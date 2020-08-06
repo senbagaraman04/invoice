@@ -4,8 +4,9 @@
 
 export const environment = {
   production: false,
-  username: "tester",
-  password: "testing123$"
+  baseURL : 'http://localhost:8080/api/',
+  userName : 'rbs',
+  password : 'rbs123'
 };
 
 /*

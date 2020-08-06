@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
-  username: "tester",
-  password: "testing123$"
+  baseURL : 'https://ramsbackend.herokuapp.com/api/',
+  userName : 'rbs',
+  password : 'rbs123'
 };
