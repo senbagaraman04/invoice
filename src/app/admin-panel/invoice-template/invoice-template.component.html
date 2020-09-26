@@ -1,10 +1,6 @@
-<div class="container" style="border:1px solid red">
+<!-- <div class="container" style="border:1px solid red">
 
- <div class="container-fluid">
- 
-
-    <!-- Invoice Header part goes here-->
-
+ <div class="container-fluid"> 
          
                 <div class="row mt-3">
                     <div class="col-md-4">
@@ -23,8 +19,7 @@
              
                 <hr>
 
-    <!--/Invoice Header part ends here-->
-
+ 
     <div class="row mt-2">
         <div class="col-md-5">
                 <div class="mt-1"><input type="text" class="form-control" placeholder="Name" required/></div>
@@ -43,4 +38,79 @@
     </div>
 
  </div>
+    </div>
+ -->
+
+
+    <div class="container">
+        <div class="container-fluid">
+
+                     <div class="row invoiceHeaderSection">
+                        <div class="col-md-4">
+                                <img src="../../../assets/3.png" alt="Company Logo goes here" width= "193px"/>
+                        </div>
+                        <div class="col-md-4" style="text-align: right;">
+                                   <span style="color: #e17d0f">  ABC Traders Pvt.Ltd </span> <br>
+                                     +0000000000
+                        </div>
+                        <div class="col-md-4">
+                                Mr. Xyz, QQQ Traders <br>
+                                QQQ Street, WWWWW <br>
+                                YYYY - 0000000 <br>
+                        </div>
+                    </div>
+                    <hr>
+
+                <div class="row invoiceCustDet">
+
+                    <div class="col-md-3">
+                            <span style="color: #e17d0f"> Customer Details</span> <br>
+                            <div class="mt-1"><input type="text" class="form-control" placeholder="Name" required/></div>
+                            <div class="mt-1"><input class="form-control" type="text" placeholder="City" required/></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="invoiceCustDetCalendar">
+                                <span style="color: #e17d0f"> Invoice Date </span> <br>
+                                <mat-form-field class="example-full-width" appearance="fill">
+                                        <mat-label>Choose a date</mat-label>
+                                        <input matInput [matDatepicker]="picker">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker touchUi #picker></mat-datepicker>
+                                      </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-3" >
+                        <span style="color: #e17d0f"> Invoice number</span> <br>  2020/00001
+
+                    </div>
+
+                    <div class="col-md-3"  >
+                            <span style="color: #e17d0f"> Billed Amount</span> <br>  
+                            <span style="font-size: 30px;">
+                                    &#x20B9; 2834.22
+                            </span>                       
+                      </div>
+
+                      
+                </div>
+                   <hr>
+
+
+                   <div class="row invoiceDetailsSection">
+                       <div class="col-md-3"> 
+                           Empty Row
+                       </div>
+                       <div class="col-md-3">
+                   
+                        </div>
+                        <div class="col-md-3">
+
+                            </div>
+                            <div class="col-md-3">
+
+                                </div>
+                   </div>
+
+        </div>
+      
     </div>
