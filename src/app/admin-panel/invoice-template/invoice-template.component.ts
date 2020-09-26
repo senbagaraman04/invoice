@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,ChangeDetectorRef, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 export class DynamicGrid{     
@@ -15,17 +15,19 @@ export class DynamicGrid{
 })
 export class InvoiceTemplateComponent implements OnInit {
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder,private cdr: ChangeDetectorRef) { }
 
   //private toastr: ToastrService
 
   dynamicArray: Array<DynamicGrid> = [];  
   newDynamic: any = {}; 
   totalBilledAmount: number = 0;
- 
+  
   ngOnInit() {
+    this.cdr.detectChanges();
     this.newDynamic = {name: "", quantity: "",rate:""};  
     this.dynamicArray.push(this.newDynamic);  
+
   }
 
   addRow() {    

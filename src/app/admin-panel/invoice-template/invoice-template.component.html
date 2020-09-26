@@ -70,18 +70,18 @@
                                 </tr>    
                             </thead>    
                             <tbody>    
-                                 <tr *ngFor="let dynamic of dynamicArray; let i = index;" >    
+                                 <tr *ngFor="let dynamic of dynamicArray; let i = index;"  >    
                                   <td (click)="deleteRow(i)">    
                                     <i aria-hidden="true" class="fa fa-trash"></i>    
                                   </td>    
                                     <td>    
-                                      <input [(ngModel)]="dynamicArray[i].description" class="form-control" type="text" />    
+                                      <input [(ngModel)]="dynamicArray[i].description"    class="form-control" type="text" />    
                                     </td>    
                                     <td>    
-                                      <input [(ngModel)]="dynamicArray[i].quantity" class="form-control" type="email" />    
+                                      <input [(ngModel)]="dynamicArray[i].quantity"    class="form-control" type="number" />    
                                     </td>    
                                     <td>    
-                                      <input [(ngModel)]="dynamicArray[i].rate" class="form-control" type="number"/>    
+                                      <input [(ngModel)]="dynamicArray[i].rate"   class="form-control" type="number"/>    
                                     </td>    
                                 </tr>    
                                 <tr>    
