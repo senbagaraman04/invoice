@@ -33,6 +33,7 @@ const appRoutes: Routes = [
    {path: 'admin', component: AdminPanelComponent,
   children:[   
     {path: 'overview', component: OverviewDetailsComponent},
+    {path: 'invoice', component: InvoiceTemplateComponent}
   ]
   
 
