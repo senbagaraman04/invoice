@@ -20,6 +20,7 @@ import { HttpClientService } from './service/http-client.service';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import {OverviewDetailsComponent} from './admin-panel/overview-details/overview-details.component';
+import { InvoiceTemplateComponent } from './admin-panel/invoice-template/invoice-template.component';
 
 
 const appRoutes: Routes = [
@@ -48,6 +49,7 @@ const appRoutes: Routes = [
     OverviewDetailsComponent,
     TermsComponent,
     WelcomeComponent,
+    InvoiceTemplateComponent,
   ],
   imports: [
     BrowserModule,
