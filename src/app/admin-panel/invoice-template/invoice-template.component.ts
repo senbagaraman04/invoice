@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+
+export class DynamicGrid{     
+  rate:number;  
+  quantity:string;  
+  description:string;  
+}
+
 
 @Component({
   selector: 'app-invoice-template',
@@ -7,9 +15,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvoiceTemplateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb:FormBuilder) { }
 
+  //private toastr: ToastrService
+
+  dynamicArray: Array<DynamicGrid> = [];  
+  newDynamic: any = {}; 
+  totalBilledAmount: number = 0;
+ 
   ngOnInit() {
+    this.newDynamic = {name: "", quantity: "",rate:""};  
+    this.dynamicArray.push(this.newDynamic);  
   }
+
+  addRow() {    
+    this.newDynamic = {name: "", quantity: "",rate:""};  
+      this.dynamicArray.push(this.newDynamic);  
+       console.log(this.dynamicArray);  
+      return true;  
+  }  
+
+  deleteRow(index) {  
+      if(this.dynamicArray.length ==1) {  
+           return false;  
+      } else {  
+          this.dynamicArray.splice(index, 1);  
+           return true;  
+      }  
+  }
+
+
 
 }

@@ -21,7 +21,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import {OverviewDetailsComponent} from './admin-panel/overview-details/overview-details.component';
 import { InvoiceTemplateComponent } from './admin-panel/invoice-template/invoice-template.component';
-
+ 
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent,
