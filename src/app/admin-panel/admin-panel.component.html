@@ -9,23 +9,23 @@
      
 
       <a mat-list-item routerLink="overview" routerLinkActive="active" >
-        <i class="fas fa-chart-pie" aria-label="true"></i><p *ngIf="expandMenu"> Overview </p>       
+        <i class="fas fa-chart-pie" aria-hidden="true"></i><p *ngIf="expandMenu"> Overview </p>       
       </a>    
 
       <a mat-list-item class="btn disabled" routerLinkActive="active" >
-        <i class="fas fa-receipt"></i> <p *ngIf="expandMenu"> Invoice/Billing </p>       
+        <i class="fas fa-receipt" aria-hidden="true"></i> <p *ngIf="expandMenu"> Invoice/Billing </p>       
         </a>
 
       <a mat-list-item class="btn disabled" routerLink="chart" routerLinkActive="active" >
-        <i class="fas fa-history"></i> <p *ngIf="expandMenu"> Billing History </p>  
+        <i class="fas fa-history" aria-hidden="true"></i> <p *ngIf="expandMenu"> Billing History </p>  
       </a>
 
       <a mat-list-item   routerLink="driver" routerLinkActive="active" >
-        <i class="fas fa-user-secret"></i> <p *ngIf="expandMenu"> Add Money </p>      
+        <i class="fas fa-user-secret" aria-hidden="true"></i> <p *ngIf="expandMenu"> Add Money </p>      
       </a>
 
       <a mat-list-item class="btn disabled">
-        <i class="fas fa-rupee-sign"></i>  <p *ngIf="expandMenu"> Expenses Details </p>  
+        <i class="fas fa-rupee-sign" aria-hidden="true"></i>  <p *ngIf="expandMenu"> Expenses Details </p>  
       </a>
 
 
@@ -35,7 +35,7 @@
  
 
       <a mat-list-item routerLink="/" >
-          <i class="fas fa-sign-out-alt"></i> <p *ngIf="expandMenu"> Logout </p>  
+          <i class="fas fa-sign-out-alt" aria-hidden="true"></i> <p *ngIf="expandMenu"> Logout </p>  
       </a>
 
     </mat-nav-list>
@@ -43,21 +43,21 @@
 
   
     <button class="expandButton">
-      <span (click)="expandMenu = !expandMenu" *ngIf="!expandMenu" >  <i class="fas fa-angle-double-left"></i>  </span>
-      <span  (click)="expandMenu = !expandMenu" *ngIf="expandMenu" >  <i class="fas fa-angle-double-right"></i>  </span>
+      <span (click)="expandMenu = !expandMenu" *ngIf="!expandMenu" >  <i aria-hidden="true" class="fas fa-angle-double-left"></i>  </span>
+      <span  (click)="expandMenu = !expandMenu" *ngIf="expandMenu" >  <i aria-hidden="true" class="fas fa-angle-double-right"></i>  </span>
 
     </button>
 
     <mat-card class="sidepanel-card"  *ngIf="expandMenu" >
         <mat-card-header>
           <div mat-card-avatar class="sidepanel-header-image"></div>
-          <mat-card-title>sri sai oil traders</mat-card-title>
+          <mat-card-title>Company Title Goes Here</mat-card-title>
           <mat-card-subtitle> billing management system</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           <p>
            Some of the links may not work or will redirect to underconstruction page.
-           Contact: <a href="https://github.com/senbagaraman04" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a><br>
+           Contact: <a href="https://github.com/senbagaraman04" target="_blank" rel="noopener noreferrer"><i aria-hidden="true" class="fab fa-github"></i></a><br>
            <span class="text-muted">Version 2020.00.01</span>
           </p>
         </mat-card-content>
