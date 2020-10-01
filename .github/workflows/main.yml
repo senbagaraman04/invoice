@@ -24,9 +24,9 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v1.4.3
       - name: Install Dependencies
-        uses:  npm install
-      - name : Build prod
-        uses:  ng serve --prod
+        uses: npm install
+      - name: Build prod
+        uses: ng serve --prod
       
  
      
