@@ -1,9 +1,9 @@
 import { Component,ChangeDetectorRef, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 export class DynamicGrid{     
   rate:number;  
-  quantity:string;  
+  quantity:number;  
   description:string;  
 }
 
@@ -39,13 +39,33 @@ export class InvoiceTemplateComponent implements OnInit {
 
   deleteRow(index) {  
       if(this.dynamicArray.length ==1) {  
+      
            return false;  
       } else {  
           this.dynamicArray.splice(index, 1);  
+          //update the total billed amount when delete button clicked
+      this.calc(); 
            return true;  
       }  
+      
   }
 
+
+  calc() {
+    console.log(this.dynamicArray);  
+   let totalSum = 0;
+    this.dynamicArray.forEach(e=>{
+     // console.log(e.rate);
+     // console.log(e.quantity);
+      totalSum = totalSum + ( e.rate * e.quantity);
+    })
+
+    this.totalBilledAmount = totalSum;
+  }
+
+  addInv() {
+    
+  }
 
 
 }
