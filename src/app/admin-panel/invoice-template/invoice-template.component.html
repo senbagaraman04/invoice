@@ -26,8 +26,8 @@
 
                     <div class="col-md-3">
                             <span style="color: #e17d0f"> Customer Details</span> <br>
-                            <div class="mt-1"><input type="text" class="form-control" placeholder="Name" required/></div>
-                            <div class="mt-1"><input class="form-control" type="text" placeholder="City" required/></div>
+                            <div class="mt-1"><input  [(ngModel)]="customerName" type="text" class="form-control" placeholder="Name" required/></div>
+                            <div class="mt-1"><input [(ngModel)]="customerCity" class="form-control" type="text" placeholder="City" required/></div>
                     </div>
                     <div class="col-md-3">
                         <div class="invoiceCustDetCalendar">

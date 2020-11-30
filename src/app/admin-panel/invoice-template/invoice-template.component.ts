@@ -1,10 +1,14 @@
 import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { HttpClientService } from 'src/app/service/http-client.service';
 
 export class DynamicGrid {
   rate: number;
   quantity: number;
   description: string;
+  name: string;
+  city: string;
+  invoiceNumber: number;
 }
 
 
@@ -15,23 +19,25 @@ export class DynamicGrid {
 })
 export class InvoiceTemplateComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private cdr: ChangeDetectorRef) { }
+  constructor(private fb: FormBuilder, private cdr: ChangeDetectorRef, private service: HttpClientService) { }
 
   // private toastr: ToastrService
 
   dynamicArray: Array<DynamicGrid> = [];
   newDynamic: any = {};
   totalBilledAmount = 0;
+  customerName: string;
+  customerCity: string;
 
   ngOnInit() {
     this.cdr.detectChanges();
-    this.newDynamic = {name: '', quantity: '', rate: '' };
+    this.newDynamic = {description: '', quantity: '', rate: '' };
     this.dynamicArray.push(this.newDynamic);
 
   }
 
   addRow() {
-       this.newDynamic = {name: '', quantity: '', rate: ''};
+       this.newDynamic = {description: '', quantity: '', rate: ''};
        this.dynamicArray.push(this.newDynamic);
        console.log(this.dynamicArray);
        return true;
@@ -65,6 +71,11 @@ export class InvoiceTemplateComponent implements OnInit {
 
   addInv() {
      console.log(this.dynamicArray);
+     console.log(this.customerName);
+     console.log(this.customerCity);
+
+     this.service.post('invoice', null);
+
   }
 
 
