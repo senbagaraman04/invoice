@@ -5,40 +5,42 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgwWowModule } from 'ngx-wow';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { RouterModule, Routes } from '@angular/router'
-import { NgVerticalTimelineModule  } from 'ng-vertical-timeline';
-import {DemoMaterialModule} from './material-module';
+import { RouterModule, Routes } from '@angular/router';
+import { NgVerticalTimelineModule } from 'ng-vertical-timeline';
+import { DemoMaterialModule } from './material-module';
 import { MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule } from '@angular/material';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
-import {MatTableModule} from '@angular/material'
-import {CdkTableModule} from '@angular/cdk/table'
-import {MatSortModule, MatDialogModule} from '@angular/material';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatTableModule } from '@angular/material';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatSortModule, MatDialogModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TermsComponent } from './terms/terms.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientService } from './service/http-client.service';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HighchartsChartModule } from 'highcharts-angular';
-import {OverviewDetailsComponent} from './admin-panel/overview-details/overview-details.component';
+import { OverviewDetailsComponent } from './admin-panel/overview-details/overview-details.component';
 import { InvoiceTemplateComponent } from './admin-panel/invoice-template/invoice-template.component';
- 
+import { SettingComponent } from './admin-panel/setting/setting.component';
+
 
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent,
-  children:[
-    { path: '', redirectTo : 'welcome', pathMatch: 'full' },
-    { path: 'welcome', component: WelcomeComponent} 
-  ]
-},
-   {path: 'admin', component: AdminPanelComponent,
-  children:[   
-    {path: 'overview', component: OverviewDetailsComponent},
-    {path: 'invoice', component: InvoiceTemplateComponent}
-  ]
-  
-
+  {
+    path: '', component: HomeComponent,
+    children: [
+      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+      { path: 'welcome', component: WelcomeComponent }
+    ]
+  },
+  {
+    path: 'admin', component: AdminPanelComponent,
+    children: [
+      { path: 'overview', component: OverviewDetailsComponent },
+      { path: 'invoice', component: InvoiceTemplateComponent },
+      { path: 'settings', component: SettingComponent }
+    ]
   }
-  
+
 ];
 
 @NgModule({
@@ -51,6 +53,7 @@ const appRoutes: Routes = [
     TermsComponent,
     WelcomeComponent,
     InvoiceTemplateComponent,
+    SettingComponent,
   ],
   imports: [
     BrowserModule,

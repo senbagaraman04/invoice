@@ -28,6 +28,10 @@
         <i class="fas fa-rupee-sign" aria-hidden="true"></i>  <p *ngIf="expandMenu"> Expenses Details </p>  
       </a>
 
+      <a mat-list-item   routerLink="settings" routerLinkActive="active" >
+        <i class="fas fa-cog" aria-hidden="true"></i> <p *ngIf="expandMenu"> Settings </p>      
+      </a>
+
 
       <a mat-list-item routerLink="/" >
           <i class="fas fa-sign-out-alt" aria-hidden="true"></i> <p *ngIf="expandMenu"> Logout </p>  

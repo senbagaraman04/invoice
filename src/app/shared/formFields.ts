@@ -25,5 +25,4 @@ export interface DRIVER {
     licenseNumber: string;
     expiryDateLicense: string;
     expiryDateBatch: string;
-
 }
