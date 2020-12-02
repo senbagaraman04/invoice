@@ -16,11 +16,11 @@
         <i class="fas fa-receipt" aria-hidden="true"></i> <p *ngIf="expandMenu"> Invoice/Billing </p>       
         </a>
 
-      <a mat-list-item class="btn disabled" routerLink="chart" routerLinkActive="active" >
+      <a mat-list-item  routerLink="history" routerLinkActive="active" >
         <i class="fas fa-history" aria-hidden="true"></i> <p *ngIf="expandMenu"> Billing History </p>  
       </a>
 
-      <a mat-list-item   routerLink="driver" routerLinkActive="active" >
+      <a mat-list-item  class="btn disabled"  routerLink="driver" routerLinkActive="active" >
         <i class="fas fa-user-secret" aria-hidden="true"></i> <p *ngIf="expandMenu"> Add Money </p>      
       </a>
 

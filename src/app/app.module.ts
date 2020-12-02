@@ -22,6 +22,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { OverviewDetailsComponent } from './admin-panel/overview-details/overview-details.component';
 import { InvoiceTemplateComponent } from './admin-panel/invoice-template/invoice-template.component';
 import { SettingComponent } from './admin-panel/setting/setting.component';
+import { BillingHistoryComponent } from './admin-panel/billing-history/billing-history.component';
 
 
 const appRoutes: Routes = [
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     children: [
       { path: 'overview', component: OverviewDetailsComponent },
       { path: 'invoice', component: InvoiceTemplateComponent },
-      { path: 'settings', component: SettingComponent }
+      { path: 'settings', component: SettingComponent },
+       { path: 'history', component: BillingHistoryComponent }
     ]
   }
 
@@ -54,6 +56,7 @@ const appRoutes: Routes = [
     WelcomeComponent,
     InvoiceTemplateComponent,
     SettingComponent,
+    BillingHistoryComponent,
   ],
   imports: [
     BrowserModule,
