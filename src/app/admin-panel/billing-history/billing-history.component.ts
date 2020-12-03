@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 
-export interface PeriodicElement {
+export interface BillingInterface {
+  no: number;
   name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  date: string;
+  product: string;
+  quantity: number;
+  rate: number;
+  total?: number;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+const billingData: BillingInterface[] = [
+  {no: 1, name: 'Manoharan', date: '12-12-20', product: 'Coconut Oil', quantity: 5, rate: 23 },
+  {no: 2, name: 'Aruna', date: '13-12-20', product: 'Tree Oil', quantity: 9, rate:53 },
+  {no: 3, name: 'Senbagaraman', date: '14-12-20', product: 'Vanaspathi Oil', quantity: 12, rate: 73 },
+  {no: 4, name: 'Sreekanth', date: '15-12-20', product: 'Ghee ', quantity: 12, rate: 34 },
+  {no: 5, name: 'Aswin', date: '16-12-20', product: 'Gingley Oil', quantity: 6, rate: 23 },
+  {no: 6, name: 'Balaji', date: '14-12-20', product: 'Gingley Oil', quantity: 3, rate: 3 },
+  {no: 7, name: 'Mano', date: '12-01-21', product: 'Oil', quantity: 12, rate: 93 },
 ];
 
 @Component({
@@ -27,9 +27,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./billing-history.component.scss']
 })
 export class BillingHistoryComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
- // displayedColumns: string[] = ['no', 'name', 'date', 'product', 'quantity', 'rate', 'total'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+ // displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['no', 'name', 'date', 'product', 'quantity', 'rate', 'total'];
+  dataSource = new MatTableDataSource(billingData);
   constructor() { }
 
   ngOnInit() {
