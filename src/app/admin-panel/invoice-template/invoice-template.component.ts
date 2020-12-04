@@ -21,7 +21,6 @@ export class InvoiceTemplateComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private cdr: ChangeDetectorRef, private service: HttpClientService) { }
 
-  // private toastr: ToastrService
 
   dynamicArray: Array<DynamicGrid> = [];
   newDynamic: any = {};
@@ -33,7 +32,6 @@ export class InvoiceTemplateComponent implements OnInit {
     this.cdr.detectChanges();
     this.newDynamic = {description: '', quantity: '', rate: '' };
     this.dynamicArray.push(this.newDynamic);
-
   }
 
   addRow() {
@@ -45,7 +43,6 @@ export class InvoiceTemplateComponent implements OnInit {
 
   deleteRow(index) {
       if (this.dynamicArray.length === 1) {
-
            return false;
       } else {
           this.dynamicArray.splice(index, 1);
@@ -70,12 +67,19 @@ export class InvoiceTemplateComponent implements OnInit {
   }
 
   addInv() {
+    // calculate the total amount even if we select the invoice adition directly.
+     this.calc();
      console.log(this.dynamicArray);
      console.log(this.customerName);
      console.log(this.customerCity);
 
      this.service.post('invoice', null);
 
+    // reset the values when all is fine and added to the DB.
+     this.dynamicArray = [];
+     this.customerName = '';
+     this.customerCity = '';
+     this.totalBilledAmount = 0;
   }
 
 
