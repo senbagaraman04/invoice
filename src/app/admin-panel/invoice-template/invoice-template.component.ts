@@ -18,6 +18,13 @@ export class DynamicGrid {
   styleUrls: ['./invoice-template.component.scss']
 })
 export class InvoiceTemplateComponent implements OnInit {
+  companyName: string;
+  phonenumber: string;
+  ownerName: string;
+  addressLine1: string;
+  addressLine2: string;
+  city: string;
+  pincode: string;
 
   constructor(private fb: FormBuilder, private cdr: ChangeDetectorRef, private service: HttpClientService) { }
 
@@ -32,6 +39,21 @@ export class InvoiceTemplateComponent implements OnInit {
     this.cdr.detectChanges();
     this.newDynamic = {description: '', quantity: '', rate: '' };
     this.dynamicArray.push(this.newDynamic);
+    this.loadCompanyInfo();
+  }
+  loadCompanyInfo() {
+
+    // Get the data from the values here
+
+    this.companyName =  'Company Name goes here';
+    this.phonenumber =  '+91 0000000000';
+    this.ownerName = 'Mr. Owner';
+    this.addressLine1 = '#23, RHUJ NAGAR';
+    this.addressLine2 = 'AREA NAME';
+    this.city = 'CityofOperation';
+    this.pincode = '000000';
+
+
   }
 
   addRow() {
