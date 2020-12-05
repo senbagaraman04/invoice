@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-setting',
@@ -6,10 +7,39 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./setting.component.scss']
 })
 export class SettingComponent implements OnInit {
+  formGroup: FormGroup;
+  formDisabled = true;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+
+    this.formGroup = this.formBuilder.group({
+      ownerName: [null, Validators.required],
+      companyName: [null, Validators.required],
+      phoneNumber: [null, Validators.required],
+    });
+
+    this.loadForm();
+  }
+
+  loadForm() {
+    // use this method to pull the values from the DB, while loading.
+  }
+
+
+  editProfileClick() {
+    this.formDisabled = false;
+  }
+
+  onSubmit(post) {
+    if (this.formGroup.valid) {
+      this.formDisabled = true;
+      console.log(post);
+      // TODO: the updated form values are collected here and sent to backend and then to DB.
+    } else {
+         console.log(' Update the form values');
+    }
   }
 
 }
