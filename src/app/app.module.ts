@@ -23,6 +23,7 @@ import { OverviewDetailsComponent } from './admin-panel/overview-details/overvie
 import { InvoiceTemplateComponent } from './admin-panel/invoice-template/invoice-template.component';
 import { SettingComponent } from './admin-panel/setting/setting.component';
 import { BillingHistoryComponent } from './admin-panel/billing-history/billing-history.component';
+import { InventoryPanelComponent } from './admin-panel/inventory-panel/inventory-panel.component';
 
 
 const appRoutes: Routes = [
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
       { path: 'overview', component: OverviewDetailsComponent },
       { path: 'invoice', component: InvoiceTemplateComponent },
       { path: 'settings', component: SettingComponent },
-       { path: 'history', component: BillingHistoryComponent }
+      { path: 'history', component: BillingHistoryComponent },
+      { path: 'inventory', component: InventoryPanelComponent }
     ]
   }
 
@@ -57,6 +59,7 @@ const appRoutes: Routes = [
     InvoiceTemplateComponent,
     SettingComponent,
     BillingHistoryComponent,
+    InventoryPanelComponent,
   ],
   imports: [
     BrowserModule,
