@@ -35,7 +35,10 @@ export class InventoryPanelComponent implements OnInit {
   }
 
   addStocks(stocks: stockListInterface) {
-      
+      this.httpClientService.post("/stocks", stocks).subscribe (response =>{
+        console.log(response);
+        alert("Stock Added"); 
+      })
   }
 
 }

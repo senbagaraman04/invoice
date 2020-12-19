@@ -19,9 +19,9 @@ export class HttpClientService {
       return this.httpClient.get(this.serverUrl + url);
   }
 
-  // post(url: string, data: Invoice): Observable<any> {
-  //     return this.httpClient.post(this.serverUrl + url, data);
-  // }
+  post(url: string, data): Observable<any> {
+      return this.httpClient.post(this.serverUrl + url, data);
+  }
 
   // put(url: string, data: Invoice): Observable<any> {
   //     return this.httpClient.put(this.serverUrl + url, data);
