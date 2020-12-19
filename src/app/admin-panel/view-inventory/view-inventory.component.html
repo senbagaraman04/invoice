@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-5">
            <strong>
-                Daily Stock List:  {{stockDate | date}}
+                Daily Stock List:  {{stockDate }}
            </strong>
         </div>
     </div>
@@ -16,28 +16,28 @@
             </tr>
             <tr>
                 <td>GroundnutOil</td>
-                <td>{{stockData.groudNutOnelt}}</td>
-                <td>{{stockData.groudNuthalflt}}</td>
+                <td>{{stockData?.groudNutOnelt}}</td>
+                <td>{{stockData?.groudNuthalflt}}</td>
             <tr>
             <tr>
                 <td>Coconut Oil</td>
-                <td>{{stockData.coconutOnelt}}</td>
-                <td>{{stockData.coconuthalflt}}</td>
+                <td>{{stockData?.coconutOnelt}}</td>
+                <td>{{stockData?.coconuthalflt}}</td>
             <tr>
             <tr>
                 <td>Sesame Oil</td>
-                <td>{{stockData.sesameOnelt}}</td>
-                <td>{{stockData.sesamehalflt}}</td>
+                <td>{{stockData?.sesameOnelt}}</td>
+                <td>{{stockData?.sesamehalflt}}</td>
             <tr>
             <tr>
                 <td>Organic Jaggery</td>
-                <td>{{stockData.organicJaggeryOnekg}}</td>
-                <td>{{stockData.organicJaggeryHalfkg}}</td>
+                <td>{{stockData?.organicJaggeryOnekg}}</td>
+                <td>{{stockData?.organicJaggeryHalfkg}}</td>
             <tr>
             <tr>
                 <td>Original Jaggery</td>
-                <td>{{stockData.originalJaggeryOnekg}}</td>
-                <td>{{stockData.originalJaggeryHalfkg}}</td>
+                <td>{{stockData?.originalJaggeryOnekg}}</td>
+                <td>{{stockData?.originalJaggeryHalfkg}}</td>
             <tr>
 
         </table>

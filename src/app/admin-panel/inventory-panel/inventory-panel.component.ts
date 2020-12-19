@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { HttpClientService } from './http-client.service';
+import { AddInvoiceService } from '../../service/addinvoice.service';
+import {stockListInterface} from '../../shared/stockList.interface';
+
 
 @Component({
   selector: 'app-inventory-panel',
@@ -14,7 +16,7 @@ export class InventoryPanelComponent implements OnInit {
   dateTime;
   myForm: any;
   stockList: any;
-  constructor( private formBuilder: FormBuilder,private httpClientService:HttpClientService) { }
+  constructor( private formBuilder: FormBuilder,private httpClientService:AddInvoiceService) { }
 
   ngOnInit() {
     this.dateTime = new Date();
@@ -48,19 +50,3 @@ export class InventoryPanelComponent implements OnInit {
 
 }
 
-
-export interface stockListInterface {
-  id: number;
-  groudNutOnelt: number;
-  groudNuthalflt: number;
-  sesameOnelt: number;
-  sesamehalflt: number;
-  coconutOnelt: number;
-  coconuthalflt: number;
-  dateOfEntry: Date;
-  organicJaggeryOnekg: number;
-  organicJaggeryHalfkg: number;
-  originalJaggeryOnekg: number;
-  originalJaggeryHalfkg: number;
-
-}

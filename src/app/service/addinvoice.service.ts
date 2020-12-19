@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class HttpClientService {
+export class AddInvoiceService {
 
 
   constructor( private httpClient: HttpClient) { }
@@ -31,5 +31,10 @@ export class HttpClientService {
   //     return this.httpClient.delete(this.serverUrl + url, { params: { id: data.id + '' } });
   // }
 
+
+
+  getCurrentStock(url: string): Observable<any> {
+    return this.httpClient.get(this.serverUrl + url);
+}
 
 }
