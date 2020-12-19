@@ -45,6 +45,7 @@ export class InventoryPanelComponent implements OnInit {
       this.httpClientService.post('/stocks', stocks).subscribe (response => {
         console.log(response);
         alert('Stock Added Successfully');
+        this.myForm.reset();
       });
   }
 
