@@ -13,7 +13,7 @@ export interface BillingInterface {
 
 const billingData: BillingInterface[] = [
   {no: 1, name: 'Manoharan', date: '12-12-20', product: 'Coconut Oil', quantity: 5, rate: 23 },
-  {no: 2, name: 'Aruna', date: '13-12-20', product: 'Tree Oil', quantity: 9, rate:53 },
+  {no: 2, name: 'Aruna', date: '13-12-20', product: 'Tree Oil', quantity: 9, rate: 53 },
   {no: 3, name: 'Senbagaraman', date: '14-12-20', product: 'Vanaspathi Oil', quantity: 12, rate: 73 },
   {no: 4, name: 'Sreekanth', date: '15-12-20', product: 'Ghee ', quantity: 12, rate: 34 },
   {no: 5, name: 'Aswin', date: '16-12-20', product: 'Gingley Oil', quantity: 6, rate: 23 },

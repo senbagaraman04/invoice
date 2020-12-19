@@ -14,7 +14,6 @@ export interface stockListInterface {
     organicJaggeryHalfkg: number;
     originalJaggeryOnekg: number;
     originalJaggeryHalfkg: number;
-  
+
   }
 
-  

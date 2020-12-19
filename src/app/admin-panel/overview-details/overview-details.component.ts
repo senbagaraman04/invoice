@@ -1,5 +1,4 @@
 import { Component, OnInit} from '@angular/core';
- 
 
 
 @Component({
@@ -10,27 +9,24 @@ import { Component, OnInit} from '@angular/core';
 
 export class OverviewDetailsComponent implements OnInit {
 
-  
-  totalOrders: number = 10;
-  totalGinglyOil: number = 23.4;
-  totalCastorOil: number = 22.3;
-   totalCoconutOil : number = 92.3;
 
-   groundnutOilPrice: number =  243.3;
-   gingelyOilPrice: number = 323.8;
-   coconutPriceOil: number = 4874.3;
-   
-   coconutStockOil : number = 32;
-   gingelyStockOil: number = 34;
-   groundnutStockOil: number = 45;
+  totalOrders = 10;
+  totalGinglyOil = 23.4;
+  totalCastorOil = 22.3;
+  totalCoconutOil = 92.3;
 
-   
+   groundnutOilPrice =  243.3;
+   gingelyOilPrice  = 323.8;
+   coconutPriceOil  = 4874.3;
+
+   coconutStockOil  = 32;
+   gingelyStockOil  = 34;
+   groundnutStockOil  = 45;
+
+
   constructor() { }
 
   ngOnInit() {
-  
   }
- 
-
 
 }

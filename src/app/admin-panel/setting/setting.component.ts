@@ -28,7 +28,7 @@ export class SettingComponent implements OnInit {
     // use this method to pull the values from the DB, while loading.
 
     this.settingsSolution.get('/settings').pipe().subscribe(response => {
-     if(response.data[0] != null) { 
+     if (response.data[0] != null) {
         this.formGroup.setValue({
         customerName : response.data[0].customerName,
         companyName : response.data[0].companyName,
@@ -47,12 +47,12 @@ export class SettingComponent implements OnInit {
   onSubmit(post) {
     if (this.formGroup.valid) {
       this.formDisabled = true;
-     this.settingsSolution.put('/settings', post).subscribe(reponse=>{
-       console.log("The form has been udpated");
+      this.settingsSolution.put('/settings', post).subscribe(reponse => {
+       console.log('The form has been udpated');
      }, error => {
        console.log(error);
      });
-   
+
      } else {
          console.log(' Update the form values');
     }
