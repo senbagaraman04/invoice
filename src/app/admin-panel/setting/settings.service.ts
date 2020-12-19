@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import { environment } from '../../../environments/environment';
 
 export interface SettingsData {
     id: number;
@@ -19,7 +19,7 @@ export class SettingsService {
   constructor( private httpClient: HttpClient) { }
 
 
-  serverUrl = 'http://localhost:8080/api';
+  serverUrl = environment.baseURL;
 
   get(url: string): Observable<any> {
       return this.httpClient.get<any>(this.serverUrl + url);

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -13,7 +14,7 @@ export class AddInvoiceService {
   constructor( private httpClient: HttpClient) { }
 
 
-  serverUrl = 'http://localhost:8080/api';
+  serverUrl = environment.baseURL;
 
   get(url: string): Observable<any> {
       return this.httpClient.get(this.serverUrl + url);
