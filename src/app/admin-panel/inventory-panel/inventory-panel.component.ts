@@ -26,6 +26,11 @@ export class InventoryPanelComponent implements OnInit {
       coconutOnelt:  new FormControl(this.stockList ? this.stockList.coconutOnelt: '', Validators.required),
       coconuthalflt:  new FormControl(this.stockList ? this.stockList.coconuthalflt: '', Validators.required),
       dateOfEntry: new FormControl(this.stockList ? new Date(): '', Validators.required),
+      organicJaggeryOnekg:  new FormControl(this.stockList ? this.stockList.organicJaggeryOnekg: '', Validators.required), 
+      organicJaggeryHalfkg:  new FormControl(this.stockList ? this.stockList.organicJaggeryHalfkg: '', Validators.required), 
+      originalJaggeryOnekg:  new FormControl(this.stockList ? this.stockList.originalJaggeryOnekg: '', Validators.required), 
+      originalJaggeryHalfkg:  new FormControl(this.stockList ? this.stockList.originalJaggeryHalfkg: '', Validators.required)
+   
     });
   }
 
@@ -53,4 +58,9 @@ export interface stockListInterface {
   coconutOnelt: number;
   coconuthalflt: number;
   dateOfEntry: number;
+  organicJaggeryOnekg: number;
+  organicJaggeryHalfkg: number;
+  originalJaggeryOnekg: number;
+  originalJaggeryHalfkg: number;
+
 }
