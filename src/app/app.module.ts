@@ -24,6 +24,7 @@ import { InvoiceTemplateComponent } from './admin-panel/invoice-template/invoice
 import { SettingComponent } from './admin-panel/setting/setting.component';
 import { BillingHistoryComponent } from './admin-panel/billing-history/billing-history.component';
 import { InventoryPanelComponent } from './admin-panel/inventory-panel/inventory-panel.component';
+import { ViewInventoryComponent } from './admin-panel/view-inventory/view-inventory.component';
 
 
 const appRoutes: Routes = [
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
       { path: 'invoice', component: InvoiceTemplateComponent },
       { path: 'settings', component: SettingComponent },
       { path: 'history', component: BillingHistoryComponent },
-      { path: 'inventory', component: InventoryPanelComponent }
+      { path: 'inventory', component: InventoryPanelComponent },
+      {path: 'viewstock', component: ViewInventoryComponent}
     ]
   }
 
@@ -60,6 +62,7 @@ const appRoutes: Routes = [
     SettingComponent,
     BillingHistoryComponent,
     InventoryPanelComponent,
+    ViewInventoryComponent,
   ],
   imports: [
     BrowserModule,

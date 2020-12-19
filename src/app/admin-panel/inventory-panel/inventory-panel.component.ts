@@ -57,7 +57,7 @@ export interface stockListInterface {
   sesamehalflt: number;
   coconutOnelt: number;
   coconuthalflt: number;
-  dateOfEntry: number;
+  dateOfEntry: Date;
   organicJaggeryOnekg: number;
   organicJaggeryHalfkg: number;
   originalJaggeryOnekg: number;

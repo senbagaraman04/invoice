@@ -12,17 +12,21 @@
         <i class="fas fa-chart-pie" aria-hidden="true"></i><p *ngIf="expandMenu"> Overview </p>       
       </a>    
 
-      <a mat-list-item routerLink="invoice"   routerLinkActive="active" >
+      <a mat-list-item class="btn disabled" routerLink="invoice"   routerLinkActive="active" >
         <i class="fas fa-receipt" aria-hidden="true"></i> <p *ngIf="expandMenu"> Invoice/Billing </p>       
         </a>
 
-      <a mat-list-item  routerLink="history" routerLinkActive="active" >
+      <a mat-list-item class="btn disabled" routerLink="history" routerLinkActive="active" >
         <i class="fas fa-history" aria-hidden="true"></i> <p *ngIf="expandMenu"> Billing History </p>  
       </a>
 
       <a mat-list-item  class="btn"  routerLink="inventory" routerLinkActive="active" >
-        <i class="fas fa-warehouse" aria-hidden="true"></i> <p *ngIf="expandMenu"> Add Inventory </p>      
+        <i class="fas fa-warehouse" aria-hidden="true"></i> <p *ngIf="expandMenu"> Add Daily Stock </p>      
       </a>
+
+      <a mat-list-item  class="btn"  routerLink="viewstock" routerLinkActive="active" >
+          <i class="fas fa-eye" aria-hidden="true"></i> <p *ngIf="expandMenu"> View Stock </p>      
+        </a>
 
       <a mat-list-item class="btn disabled">
         <i class="fas fa-rupee-sign" aria-hidden="true"></i>  <p *ngIf="expandMenu"> Expenses Details </p>  
