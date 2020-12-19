@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -24,9 +25,18 @@ export class OverviewDetailsComponent implements OnInit {
    groundnutStockOil  = 45;
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+
+  addStock() {
+    this.router.navigate(['/admin/inventory']);
+  }
+
+  viewStock() {
+    this.router.navigate(['/admin/viewstock']);
   }
 
 }

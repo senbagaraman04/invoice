@@ -5,10 +5,9 @@
   <mat-sidenav  mode="side" disableClose="true" opened="true" [fixedInViewport]="true"  [@expandMenuBar]="expandMenu ? 'open': 'closed'">
 
 
-    <mat-nav-list >
-     
+    <mat-nav-list >     
 
-      <a mat-list-item routerLink="overview" routerLinkActive="active" >
+      <a mat-list-item  class="btn disabled" routerLink="overview" routerLinkActive="active" >
         <i class="fas fa-chart-pie" aria-hidden="true"></i><p *ngIf="expandMenu"> Overview </p>       
       </a>    
 
@@ -20,11 +19,11 @@
         <i class="fas fa-history" aria-hidden="true"></i> <p *ngIf="expandMenu"> Billing History </p>  
       </a>
 
-      <a mat-list-item  class="btn"  routerLink="inventory" routerLinkActive="active" >
+      <a mat-list-item   routerLink="inventory" routerLinkActive="active" >
         <i class="fas fa-warehouse" aria-hidden="true"></i> <p *ngIf="expandMenu"> Add Daily Stock </p>      
       </a>
 
-      <a mat-list-item  class="btn"  routerLink="viewstock" routerLinkActive="active" >
+      <a mat-list-item    routerLink="viewstock" routerLinkActive="active" >
           <i class="fas fa-eye" aria-hidden="true"></i> <p *ngIf="expandMenu"> View Stock </p>      
         </a>
 
@@ -32,7 +31,7 @@
         <i class="fas fa-rupee-sign" aria-hidden="true"></i>  <p *ngIf="expandMenu"> Expenses Details </p>  
       </a>
 
-      <a mat-list-item   routerLink="settings" routerLinkActive="active" >
+      <a mat-list-item  class="btn disabled"  routerLink="settings" routerLinkActive="active" >
         <i class="fas fa-cog" aria-hidden="true"></i> <p *ngIf="expandMenu"> Settings </p>      
       </a>
 
