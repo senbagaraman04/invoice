@@ -16,15 +16,13 @@ export class OverviewDetailsComponent implements OnInit {
   totalCastorOil: number = 22.3;
    totalCoconutOil : number = 92.3;
 
-   castorOilPrice: number =  243.3;
+   groundnutOilPrice: number =  243.3;
    gingelyOilPrice: number = 323.8;
    coconutPriceOil: number = 4874.3;
-
-
-
+   
    coconutStockOil : number = 32;
    gingelyStockOil: number = 34;
-   castorStockOil: number = 45;
+   groundnutStockOil: number = 45;
 
    
   constructor() { }
