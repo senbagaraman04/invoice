@@ -39,7 +39,6 @@
 
         <input type="submit" id="submit" value="Submit"  (click) ="checkLogin()" >
 
-        <marquee>
 
           <ng-container *ngIf="submitted && f.username.errors" class="invalid-feedback">
               <span *ngIf="f.username.errors.required">Username is required</span>
@@ -51,9 +50,7 @@
           <ng-container class="form-group">
               <p *ngIf="flagsCheck">{{message}}</p>
            </ng-container>
-        </marquee>
-
-        </form>
+                </form>
 
         
       </div>
