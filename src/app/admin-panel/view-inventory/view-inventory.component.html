@@ -1,0 +1,48 @@
+<div class="container-fluid ml-1 mt-2" style="height:100vh; overflow-y:auto">
+    <div class="row">
+        <div class="col-md-5">
+           <strong>
+                Daily Stock List:  {{stockDate }}
+           </strong>
+        </div>
+    </div>
+
+    <div class="row">
+        Since todays data has not been updated yet, you are provided with the latest available data.
+    </div>
+
+    <div class="row stockTable mt-4">
+        <table class="stockTable" aria-describedby="Stock Table" >
+            <tr>
+                <th id="particulars">Particulars</th>
+                <th id="one Liter">1(lt/kg)</th>
+                <th id="half kg">0.5(lt/kg)</th>
+            </tr>
+            <tr>
+                <td>GroundnutOil</td>
+                <td>{{stockData?.groudNutOnelt}}</td>
+                <td>{{stockData?.groudNuthalflt}}</td>
+            <tr>
+            <tr>
+                <td>Coconut Oil</td>
+                <td>{{stockData?.coconutOnelt}}</td>
+                <td>{{stockData?.coconuthalflt}}</td>
+            <tr>
+            <tr>
+                <td>Sesame Oil</td>
+                <td>{{stockData?.sesameOnelt}}</td>
+                <td>{{stockData?.sesamehalflt}}</td>
+            <tr>
+            <tr>
+                <td>Organic Jaggery</td>
+                <td>{{stockData?.organicJaggeryOnekg}}</td>
+                <td>{{stockData?.organicJaggeryHalfkg}}</td>
+            <tr>
+            <tr>
+                <td>Original Jaggery</td>
+                <td>{{stockData?.originalJaggeryOnekg}}</td>
+                <td>{{stockData?.originalJaggeryHalfkg}}</td>
+            <tr>
+
+        </table>
+    </div>

@@ -1,0 +1,101 @@
+
+<div class="container emp-profile">
+    <form method="post">
+        <div class="row">
+             <div class="col-md-4">
+                <div class="profile-img">
+                    <img src="../../../assets/store.jpg" alt="">
+                    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/> -->
+                    <!-- <div class="file btn btn-lg btn-primary">
+                        Change Photo
+                        <input type="file" name="file"/>
+                    </div> -->
+                </div> 
+            </div> 
+            <div class="col-md-4">
+                <div class="profile-head">
+                            <h5>
+                                Profile Update Page 
+                            </h5>
+                           
+                            <p class="proile-rating"> Click on the below heading to see the content</p>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                       <li class="nav-item ">
+                            <a class="nav-link " id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false" >Info</a>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+          
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-work">
+                   
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content home-tab outline"  id="myTabContent">
+                        <fieldset [disabled]="formDisabled">
+
+                           <form [formGroup]="formGroup">
+
+                    <div class="tab-pane fade show active" id="home"  role="tabpanel" aria-labelledby="home-tab" >
+                        
+                      
+                        <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Customer Name</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                       	<input type="text" matInput formControlName="customerName" placeholder="Customer Name">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <label>Company Name</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                            <input type="text" matInput formControlName="companyName" placeholder="Company Name">
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3 mt-2">
+                                    <div class="col-md-6">
+                                        <label>Phone</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                            <input type="text" matInput formControlName="phoneNumber" placeholder="Phone Number">
+
+                                    </div>
+                                </div>
+
+                    </div>
+
+               
+                 
+
+
+                           </form>
+               
+
+
+
+
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </form>  
+    
+    
+
+    <div class="row">
+        <div class="col-md-2">
+            <input type="submit" class="profile-edit-btn" name="btnAddMore" (click)="editProfileClick()" value="Edit Profile"/>
+        </div>
+        <div class="col-md-2">
+                <button class="profile-edit-btn" color="primary" type="submit" (click)= "onSubmit(formGroup.value)" >Submit Form</button>
+        </div>
+    </div>
+</div>

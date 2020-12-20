@@ -1,7 +1,7 @@
 <div class="page mt-4">
   <div class="container">
     <div class="left">
-      <div class="login">rbs Login</div>
+      <div class="login">Sai Traders</div>
       <div class="smallTextLogin">rams billing System <span class="text-muted"> <br>&copy; all rights reserved v2020.0.1</span>  </div>
     </div>
     <div class="right">
@@ -39,7 +39,6 @@
 
         <input type="submit" id="submit" value="Submit"  (click) ="checkLogin()" >
 
-        <marquee>
 
           <ng-container *ngIf="submitted && f.username.errors" class="invalid-feedback">
               <span *ngIf="f.username.errors.required">Username is required</span>
@@ -51,9 +50,7 @@
           <ng-container class="form-group">
               <p *ngIf="flagsCheck">{{message}}</p>
            </ng-container>
-        </marquee>
-
-        </form>
+                </form>
 
         
       </div>

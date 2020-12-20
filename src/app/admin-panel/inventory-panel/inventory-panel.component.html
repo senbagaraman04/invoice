@@ -1,0 +1,109 @@
+<div class="container-fluid ml-2" style="overflow: auto;
+height: 100vh;">
+    <div class="row">
+        <div class="col-md-4">
+          <strong>
+                Stock Management 
+          </strong>
+        </div>
+    </div>
+
+<div class="mt-4">
+    <div class="ml-2 col-md-6" style="overflow-y:scroll">
+        <form  [formGroup]="myForm"  #form="ngForm">
+
+                        
+                <div class="form-group row">
+                        <label for="dateOfEntry" class="col-sm-2 col-form-label">Date of Entry</label>
+                        <div class="col-sm-6">
+                          <input type="date" class="form-control" formControlName="dateOfEntry" id="dateOfEntry" placeholder="Date" required>
+                        </div>
+                </div> 
+
+            <!--Ground Nut Data-->
+                <div class="form-group row">
+                        <label for="groudNutOnelt" class="col-sm-2 col-form-label">Groundnut Oil (1lt)</label>
+                        <div class="col-sm-6">
+                          <input type="number" class="form-control" formControlName="groudNutOnelt" id="groudNutOnelt" placeholder="Groundnut Oil (1lt)" required>
+                        </div>
+                </div>
+
+                <div class="form-group row">
+                        <label for="groudNuthalflt" class="col-sm-2 col-form-label">Groundnut Oil (0.5lt)</label>
+                        <div class="col-sm-6">
+                          <input type="number" class="form-control" formControlName="groudNuthalflt" id="groudNuthalflt" placeholder="Groundnut Oil (0.5lt)" required>
+                        </div>
+                </div>
+            <!-- Sesame Oil Data-->
+            <div class="form-group row">
+                    <label for="groudNutOnelt" class="col-sm-2 col-form-label">Sesame Oil (1lt)</label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" formControlName="sesameOnelt" id="sesameOnelt" placeholder="Sesame Oil (1lt)" required>
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                    <label for="sesamehalflt" class="col-sm-2 col-form-label">Sesame Oil (0.5lt)</label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" formControlName="sesamehalflt" id="sesamehalflt" placeholder="Sesame Oil (0.5lt)" required>
+                    </div>
+            </div>
+
+              <!-- Coconut Oil Data-->
+              <div class="form-group row">
+                    <label for="groudNutOnelt" class="col-sm-2 col-form-label">Coconut Oil (1lt)</label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" formControlName="coconutOnelt" id="coconutOnelt" placeholder="Coconut Oil (1lt)" required>
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                    <label for="groudNuthalflt" class="col-sm-2 col-form-label">Coconut Oil (0.5lt)</label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" formControlName="coconuthalflt" id="coconuthalflt" placeholder="Coconut Oil (0.5lt)" required>
+                    </div>
+            </div>     
+
+              
+
+            <!-- Sugar-->
+
+            <div class="form-group row">
+                    <label for="organicJaggeryOnekg" class="col-sm-2 col-form-label">Organic Jaggery (1Kg)</label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" formControlName="organicJaggeryOnekg" id="organicJaggeryOnekg" placeholder="Organic Jaggery 1kg" required>
+                    </div>
+            </div>     
+            
+            <div class="form-group row">
+                    <label for="organicJaggeryHalfkg" class="col-sm-2 col-form-label">Organic Jaggery (0.5Kg)</label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" formControlName="organicJaggeryHalfkg" id="organicJaggeryHalfkg" placeholder="Organic Jaggery 0.5kg" required>
+                    </div>
+            </div> 
+
+
+            <div class="form-group row">
+                    <label for="originalJaggeryOnekg" class="col-sm-2 col-form-label">Original Jaggery (1Kg)</label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" formControlName="originalJaggeryOnekg" id="originalJaggeryOnekg" placeholder="Original Jaggery 1kg" required>
+                    </div>
+            </div>     
+            
+            <div class="form-group row">
+                    <label for="originalJaggeryHalfkg" class="col-sm-2 col-form-label">Original Jaggery (0.5Kg)</label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" formControlName="originalJaggeryHalfkg" id="originalJaggeryHalfkg" placeholder="Original Jaggery 0.5kg" required>
+                    </div>
+            </div> 
+
+
+                <div class="form-group row">
+                        <div class="col-sm-10">
+                          <button type="submit" (click)="submitForm(myForm)" class="mr-3 btn  addButton waves-effect waves-light">Submit</button>
+                      </div>
+                      </div>
+                     
+        </form>
+    </div>
+</div>
