@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { AddInvoiceService } from '../../service/addinvoice.service';
 import {stockListInterface} from '../../shared/stockList.interface';
+import { AddInvoiceService } from 'src/app/service/addinvoice.service';
 
 
 @Component({

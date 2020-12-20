@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Invoice } from '../shared/formFields';
 import { environment } from 'src/environments/environment';
 
 
@@ -21,15 +20,15 @@ export class HttpClientService {
       return this.httpClient.get(this.serverUrl + url);
   }
 
-  post(url: string, data: Invoice): Observable<any> {
+  post(url: string, data): Observable<any> {
       return this.httpClient.post(this.serverUrl + url, data);
   }
 
-  put(url: string, data: Invoice): Observable<any> {
+  put(url: string, data): Observable<any> {
       return this.httpClient.put(this.serverUrl + url, data);
   }
 
-  delete(url: string, data: Invoice): Observable<any> {
+  delete(url: string, data): Observable<any> {
       return this.httpClient.delete(this.serverUrl + url, { params: { id: data.id + '' } });
   }
 
