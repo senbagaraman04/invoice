@@ -1,6 +1,6 @@
 {
-  "name": "fleet-management",
-  "version": "0.0.0",
+  "name": "billing-management",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
