@@ -11,17 +11,18 @@ import { environment } from 'src/environments/environment';
 export class AddInvoiceService {
 
 
-  constructor( private httpClient: HttpClient) { }
+
+  constructor(private httpClient: HttpClient) { }
 
 
   serverUrl = environment.baseURL;
 
   get(url: string): Observable<any> {
-      return this.httpClient.get(this.serverUrl + url);
+    return this.httpClient.get(this.serverUrl + url);
   }
 
   post(url: string, data): Observable<any> {
-      return this.httpClient.post(this.serverUrl + url, data);
+    return this.httpClient.post(this.serverUrl + url, data);
   }
 
   // put(url: string, data: Invoice): Observable<any> {
@@ -36,6 +37,10 @@ export class AddInvoiceService {
 
   getCurrentStock(url: string): Observable<any> {
     return this.httpClient.get(this.serverUrl + url);
-}
+  }
+
+  getAllProducts() {
+    return null;
+  }
 
 }
